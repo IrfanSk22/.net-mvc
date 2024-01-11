@@ -1,0 +1,62 @@
+🔶 .NET Core Roadmap
+
+=> Webforms (2002) - It was a revolution at that time but it has its own drawbacks so there was  a need 
+of overcome all of them
+=> ASP.NET MVC (2009) - It was good but was created on top of the components of the Webforms so 
+it was tightly coupled to IIS and windows OS. 
+
+With evolution of development microsoft has to keep up with changing technology
+
+=> .NET Core 1.0 (2016) - Completely re-written
+=> .NET Core 2.0 (2018) 
+...
+=> .NET Core 8.0 (2023)
+
+🔶 .NET Core
+
+> Fast and Open Source
+> Cross Platform
+> Built in Dependency Injection
+> Cloud Friendly
+> Performance
+
+🔶 MVC Architecture
+
+The MVC architecture consists of three main components:
+
+MODEL: The model represents the data of the application. It is responsible for storing, retrieving, and 
+manipulating data.
+
+VIEW: The view is the user interface of the application. It is responsible for displaying data to the user 
+and capturing user input.
+
+CONTROLLER: The controller handles user interaction and updates the model and view accordingly. It is the 
+intermediary between the user and the model and view. 
+
+1) The user clicks on something (on a webapp).
+2) The click sends a request to the controller.
+3) The controller gets the data from the model.
+4) The controller sends the data to the view.
+5) The view presents the data to the user.
+
+🔶 Routing in MVC
+
+The URL pattern pattern for routing is considered after the domain name 
+
+https://localhost:5555/Category/Index/3
+https://localhost:5555/{controller}/{action}/{id}
+
++-----------------------------------------------------+-------------+--------+-------+
+| URL                                                 | Controller  | Action |  Id   |
++-----------------------------------------------------+-------------+--------+-------+
+| https://localhost:5555/Category/Index                | Category    | Index  | Null |
+| https://localhost:5555/Category                      | Category    | Index  | Null |
+| https://localhost:5555/Category/Edit/3               | Category    | Edit   | 3    |
+| https://localhost:5555/Product/Details/3             | Product     | Details| 3    |
++-----------------------------------------------------+-------------+--------+-------+
+
+🔶 Dependency Injection
+
+Dependency injection is a design pattern in which a class or object has its dependent classes injected
+rather than directly creating them. This is done so that we do not have to create, manage, and dispose the object,
+and it improves the loose coupling between classes.
