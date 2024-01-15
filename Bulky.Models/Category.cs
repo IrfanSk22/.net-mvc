@@ -1,8 +1,7 @@
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
-using System.Runtime.InteropServices.JavaScript;
 
-namespace BulkyWeb.Models;
+namespace Bulky.Models;
 
 public class Category
 {
