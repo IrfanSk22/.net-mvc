@@ -11,10 +11,13 @@ public class UnitOfWork : IUnitOfWork
     {
         _context = context;
         CategoryRepository = new CategoryRepository(_context);
+        ProductRepository = new ProductRepository(_context);
     }
     
     public ICategoryRepository CategoryRepository { get; private set; }
     
+    public IProductRepository ProductRepository { get; private set; }
+
     public void Save()
     {
         _context.SaveChanges();
