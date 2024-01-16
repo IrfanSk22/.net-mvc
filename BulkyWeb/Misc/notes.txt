@@ -60,3 +60,24 @@ https://localhost:5555/{controller}/{action}/{id}
 Dependency injection is a design pattern in which a class or object has its dependent classes injected
 rather than directly creating them. This is done so that we do not have to create, manage, and dispose the object,
 and it improves the loose coupling between classes.
+
+🔶 Dependency Injection Lifetimes
+
+TRANSIENT: (New Service - every time requested)
+> Transient lifetime is the simplest one among all of them, and it is also one of the safest one.
+> Transient basically means that whenever we want any implementation, create a new object and give 
+that new object. You never have to reuse an existing object. Every time a service is requested, a 
+new implementation is created.
+
+SCOPED: (New Service - once per request)
+> It depends on the HTTP request. So whenever an HTTP request is sent to the server that time for 
+that scope, one lifetime will be created and then the same object or same service is used wherever 
+in that request the service is requested.
+> So let's say for one single page load we are calling a service ten times. It will only create that 
+object one time and it will use that same object ten times in that one request. But then if a next 
+request comes in, then a new implementation is created.
+
+SINGLETON: (New Service - once per application lifetime)
+> Here one implementation is created for the lifetime of the application.
+> So once the application starts, we create an object of that service or an implementation, and that
+is used for all the upcoming requests unless you restart the application.
